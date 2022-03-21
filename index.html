@@ -74,16 +74,27 @@
         Apply Now
       </button>
     </section>
-    <script>  let country = prompt("which country do you come from?");
+    <script> 
 
-      function canSpeakPortuguese () {
-      if (country === "Brazil" || country=== "Portugal") {
-           alert("You speak Portuguese");
-           } else {
-         alert("Go learn Portuguese!");
-        }
-      }
-      canSpeakPortuguese ();
+    function applySheCodes () { 
+    let name = prompt("what is your first name");
+    let age = prompt("How old are you?");
+    let h1 = document.querySelector("h1");
+    
+    if (age >= 18) {
+      
+    h1.innerHTML = "Hi" + " " + name +"!" + " "+ "Welcome to SheCodes"
+    } else { h1.innerHTML = "Sorry" + " " +  name + "!" + " " + "You cannot join SheCodes"
+  }
+  }
+
+  let applyButton = document.querySelector("button");
+  applyButton.addEventListener("click", applySheCodes);
+
     </script>
   </body>
 </html>
+
+
+
+ 
